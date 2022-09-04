@@ -3,10 +3,10 @@
         <h1>Marks</h1>
         <div class="form">
             <div class="rollno">
-                <input type="text" placeholder="Roll Number" required>
+                <input type="text" id = "rollno" name = "rollno" placeholder="Roll Number" required #rollno>
             </div>
             <div class="submit">
-                <input type="submit" value="Get the marks" (click)="Getmarks()">
+                <input type="submit" value="Get the marks" (click)="getMarksOfAStudent(rollno.value)">
             </div>
         </div>
     </div>
