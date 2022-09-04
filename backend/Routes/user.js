@@ -10,10 +10,7 @@ router.get('/Students', (req, res) => {
             console.log("Data fetch error", err);
         }
         else if (results.length > 0) {
-            res.send({
-                message: "All the data has been retrieved",
-                data: results
-            });
+            res.send(results);
         }
         else {
             res.send({
@@ -38,10 +35,7 @@ router.get('/Students/:StudentRollnumber', (req, res) => {
             res.send("Data not found");
         }
         else {
-            res.send({
-                message: "Data of the Third Year of NEC assignment Marks",
-                data: result
-            });
+            res.send(result);
         }
 
     });
