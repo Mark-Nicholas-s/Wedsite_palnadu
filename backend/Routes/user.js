@@ -32,7 +32,7 @@ router.get('/Students/:StudentRollnumber', (req, res) => {
         }
 
         else if (result.length <= 0) {
-            res.send("Data not found");
+            res.send("Data not there");
         }
         else {
             res.send(result);
