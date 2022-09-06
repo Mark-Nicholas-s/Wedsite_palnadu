@@ -40,6 +40,8 @@ export class StudentRollNumberComponent implements OnInit {
   getMarksOfAStudent(rollno: string) {
     this.studentService.getStudent(rollno)
                         .subscribe((data) => {
+
+                          
                           if (data) {
                             this.student = data;
                             this.StudentObject=this.student[0]
