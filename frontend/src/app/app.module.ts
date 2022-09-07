@@ -11,13 +11,15 @@ import { HttpClient } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FGLformComponent } from './fglform/fglform.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     StudentRollNumberComponent,
     HomeComponent,
     HeaderComponent,
-    FGLformComponent
+    FGLformComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

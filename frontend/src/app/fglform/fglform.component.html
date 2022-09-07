@@ -1,136 +1,169 @@
+<div class=".form">
+<input class="form-control" type="email" name="Email" id="Email" class="form-control " placeholder="Email" [(ngModel)]="email">
 
-<div class="form">
-        <table cellspacing="3">
-            <tr>
-                <th colspan="3">Inspection report Of wholesale/retail FoodGrain license dealers</th>
-            </tr>
-            <!-- 1 -->
-            <tr>
-                <td>Name of the dealer & <br>Address of the business premises:</td>
-                <td><input type="text"></td>
-                <td><textarea name="address" id="address-bp" ></textarea></td>
-            </tr>
+        <div class="table-c mx-auto container">
 
+         <table class="table-1" cellspacing="3">
+               <tr>
+                <th class="text-center text-primary display-4" colspan="2">Inspection report of wholesale/retail FoodFrain License Dealers </th>
+               </tr>
+                <!-- 1 -->
+                <tr>
+                    <td>Name of the dealer & <br>Address of the business premises:</td>
+                    <td>
+                        <input type="text" class="form-control " placeholder="Name" [(ngModel)]="DealerName"  ><br><br>
+                        <textarea name="address" id="address-bp" class="form-control " placeholder="Address" [(ngModel)]="DealerAddress"></textarea>
+                    </td>
+                </tr>
 
-            <!-- 2 -->
-            <tr>
-                <td>Name and address of the <br>person present at the time of inspection</td>
-                <td><input type="text"></td>
-                <td><textarea name="address" id="address-pp" ></textarea></td>
-            </tr>
+                <!-- 2 -->
+                <tr>
+                    <td>Name and address of the <br>person present at the time of inspection</td>
+                    <td>
+                        <input type="text" class="form-control " placeholder="Name" [(ngModel)]="Nameofpresonatinsp"><br><br>
+                        <textarea name="address" id="address-pp" class="form-control " placeholder="Address" [(ngModel)]="addressofpresonatinsp"></textarea>
+                    </td>
+                </tr>
+                <!-- 3 -->
+                <tr><td colspan="2">License Particulars</td></tr>
 
+                <!-- 3a -->
+                <tr>
+                    <td>DSO License No. & its validity</td>
+                    <td>
+                        <input type="text" class="form-control " placeholder="DSO License No" [(ngModel)]="Dsonumber"><br><br>
+                        
+                    </td>
+                </tr>
 
-            <!-- 3 -->
-            <tr><td>License Particulars</td></tr>
-
-            <!-- 3a -->
-            <tr>
-                <td>DSO License No. & its validity</td>
-                <td colspan="2"><input type="text"></td>
-            </tr>
-
-            <!-- 3b -->
-            <tr>
-                <td>V.A.T.TIN No.</td>
-                <td colspan="2"><input type="text"></td>
-            </tr>
-
-
-            <!-- 4 -->
-            <tr>
-                <td>Whether Price list cum Stock board exhibited or not</td>
-                <td colspan="2">
-                    <input type="radio" name="price-list" value="yes">Yes
-                    <input type="radio" name="price-list" value="No">No
-                </td>
-            </tr>
+                <!-- 3b -->
+                <tr>
+                    <td >V.A.T.TIN No: </td>
+                    <td><input type="text" placeholder="V.A.T.TIN No" class="form-control " [(ngModel)]="Vattinnumber"></td>
+                </tr>
 
 
-            <!-- 5 -->
-            <tr>
-                <td>Whether business premises / godown are located in the notified place or not</td>
-                <td colspan="2">
-                    <input type="radio" name="price-list" value="yes">Yes
-                    <input type="radio" name="price-list" value="No">No
-                </td>
-            </tr>
+                <!-- 4 -->
+                <tr>
+                    <td>Whether Price list cum Stock board exhibited or not</td>
+                    <td>
+                        <input type="radio" name="price-list" value="yes" [(ngModel)]="Pricelist">Yes
+                        <input type="radio" name="price-list" value="No" [(ngModel)]="Pricelist">No
+                    </td>
+                </tr>
 
 
-            <!-- 6 -->
-            <tr><td>Maintenance of Registers/Records</td></tr>
-            <!-- 6a -->
-            <tr><td> Stock Register</td><td colspan="2"><textarea></textarea></td></tr>
-            <!-- 6b -->
-            <tr><td>Sales Register</td><td colspan="2"><textarea></textarea></td></tr>
-            <!-- 6c -->
-            <tr><td>Bill Books</td><td colspan="2"><textarea></textarea></td></tr>
-            <!-- 6d -->
-            <tr><td>Way Bills</td><td colspan="2"><textarea></textarea></td></tr>
+                <!-- 5 -->
+                <tr>
+                    <td>Whether business premises / godown are located in the notified place or not</td>
+                    <td>
+                        <input type="radio" name="location" value="yes" [(ngModel)]="location">Yes
+                        <input type="radio" name="location" value="No" [(ngModel)]="location">No
+                    </td>
+                </tr>
 
 
-            <!-- 7 -->
-            <tr>
-                <td>Whether the dealer is issuing bills to the Consumers</td>
-                <td colspan="2"> 
-                    <input type="radio" name="price-list" value="yes">Yes
-                    <input type="radio" name="price-list" value="No">No
-                </td>
-            </tr>
+                <!-- 6 -->
+                <tr><td colspan="2">Maintenance of Registers/Records</td></tr>
+                <!-- 6a -->
+                <tr>
+                    <td> Stock Register</td>
+                    <td>
+                        <input type="radio" name="Stock Register" value="yes" [(ngModel)]="StockRegister">Yes
+                        <input type="radio" name="Stock Register" value="No" [(ngModel)]="StockRegister">No
+                    </td>
+                </tr>
+                <!-- 6b -->
+                <tr>
+                    <td>Sales Register</td>
+                    <td>
+                        <input type="radio" name="SalesRegister" value="yes" [(ngModel)]="SalesRegister">Yes
+                        <input type="radio" name="SalesRegister" value="No" [(ngModel)]="SalesRegister">No
+                    </td>
+                </tr>
+                <!-- 6c -->
+                <tr>
+                    <td>Bill Books</td>
+                    <td>
+                        <input type="radio" name="BillBooks" value="yes" [(ngModel)]="BillBooks">Yes
+                        <input type="radio" name="BillBooks" value="No" [(ngModel)]="BillBooks">No
+                    </td>
+                </tr>
+                <!-- 6d -->
+                <tr>
+                    <td>Way Bills</td>
+                    <td>
+                        <input type="radio" name="WayBills" value="yes" [(ngModel)]="WayBills">Yes
+                        <input type="radio" name="WayBills" value="No" [(ngModel)]="WayBills">No
+                    </td>
+                </tr>
 
 
-            <!-- 8 -->
-            <tr>
-                <td>Whether 'C' Form returns are being submitted to the Licensing Authority</td>
-                <td colspan="2">
-                    <input type="radio" name="price-list" value="yes">Yes
-                    <input type="radio" name="price-list" value="No">No
-                </td>
-            </tr>
+                <!-- 7 -->
+                <tr>
+                    <td>Whether the dealer is issuing bills to the Consumers</td>
+                    <td colspan="2"> 
+                        <input type="radio" name="Consumersbills" value="yes"  [(ngModel)]="Consumersbills">Yes
+                        <input type="radio" name="Consumersbills" value="No" [(ngModel)]="Consumersbills">No
+                    </td>
+                </tr>
 
 
-            <!-- 9 -->
-            <tr><td colspan="4">Commodities & Quantities available at the time of inspection</td></tr>
+                <!-- 8 -->
+                <tr>
+                    <td>Whether 'C' Form returns are being submitted to the Licensing Authority</td>
+                    <td colspan="2">
+                        <input type="radio" name="submit-LA" value="yes" [(ngModel)]="submitLA">Yes
+                        <input type="radio" name="submit-LA" value="No" [(ngModel)]="submitLA">No
+                    </td>
+                </tr>
+            </table>
+            <br>
 
-        </table>
+            <!-- another table -->
+            <table class="table-2">
+                <tr><th class="text-center text-muted" colspan="4">Commodities & Quantities available at the time of inspection</th></tr>
+                <tr>
+                    <th class="text-center text-muted">Commodity</th>
+                    <th class="text-center text-muted">As per Stock Register</th>
+                    <th class="text-center text-muted">Stock on Physical verification</th>
+                    <th class="text-center text-muted">Variation</th>
+                </tr>
 
-        <!-- another table -->
-        <table class="another-table" style="width: 73%" >
-            <tr>
-                <th>Commodity</th>
-                <th>As per Stock Register</th>
-                <th>Stock on Physical verification</th>
-                <th>Variation</th>
-            </tr>
-
-            <tr>
-                <th>Rice</th>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-            </tr>
-            <tr>
-                <th>Pulses</th>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-            </tr>
-            <tr>
-                <th>Edible Oils</th>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-            </tr>
-            <tr>
-                <th>Edible Oil Seeds</th>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-            </tr>
-            <tr>
-                <th>Other Items</th>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-            </tr>
-        </table>
+                <tr>
+                    <th class="text-center text-muted">Rice</th>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th class="text-center text-muted">Pulses</th>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th class="text-center text-muted">Edible Oils</th>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th class="text-center text-muted">Edible Oil Seeds</th>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th class="text-center text-muted">Other Items</th>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="text-center">
+         <button class="btn btn-primary m-2" (click)="print()">Form Submit</button>
+         <p class="alert-success m-2 py-3" *ngIf="form">Responce Taken</p>
+        </div>
     </div>
