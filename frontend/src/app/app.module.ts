@@ -8,10 +8,16 @@ import { StudentRollNumberComponent } from './student-roll-number/student-roll-n
 import { StudentServiceService } from './student-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { FGLformComponent } from './fglform/fglform.component';
 @NgModule({
   declarations: [
     AppComponent,
-    StudentRollNumberComponent
+    StudentRollNumberComponent,
+    HomeComponent,
+    HeaderComponent,
+    FGLformComponent
   ],
   imports: [
     BrowserModule,
