@@ -1,0 +1,21 @@
+<div class="whole-page pr-5">
+    <div class="container mr-5">
+        <p>Login Page</p>
+        <div class="form">
+            <div class="email">
+                <input type="email" placeholder="E-Mail" required [(ngModel)]="Email">
+            </div>
+            <div class="password">
+                <input type="password" placeholder="Password" required [(ngModel)]="Password">
+            </div>
+            <div class="submit">
+                <input type="submit" value="Login" (click)="login()">
+            </div><br>
+            <div class="other">
+                <label for="forget-password">Don't Remember: <a [routerLink]="['/ResetPwd']">Forgot Password?</a></label><br><br>
+                <label for="register">Don't have Account: <a [routerLink]="['/register']">Register</a></label>
+            </div>
+        </div>
+    </div>
+    <div class="Result">{{result}}</div>
+</div>

@@ -1,0 +1,96 @@
+.navbar-1{
+    padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+.navbar-1 div a{
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+.nav-icons li{
+    text-transform: uppercase;
+    font-size: 15px;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    border-right: 0.1px solid white;
+}
+.navbar-2{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+.left-side{
+    display: flex;
+}
+.navbar-2 .right-side img{
+    padding-right: 20px;
+}
+.navbar-2 div img{
+    padding: 10px 0 0 20px;
+    height: 100px;
+
+}
+.navbar-2 div p{
+    font-size: 20px;
+    text-align: left;
+    padding: 10px 0 0 10px;
+    text-transform: uppercase;
+}
+.navbar-3{
+    background-color: lightgrey;
+
+}
+.navbar-3 ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.navbar-3 ul li{
+    list-style-type: none;
+    position: relative;
+    margin: 0 5px;
+    padding:10px;
+}
+.navbar-3 ul li a{
+    padding:10px;
+    cursor: pointer;
+    transition: all 1s;
+}
+.navbar-3 ul li a:hover{
+    background-color: rgb(174, 37, 37);
+    color: white;
+}
+.navbar-3 ul li ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    margin-left:10px;
+    visibility: hidden;
+    opacity:0;
+    height:0%;
+    transition: all 1s;
+    transition-delay:.5s;
+    width:150px;
+    margin-top: 10px;
+    color:white;
+    background-color:rgb(174, 37, 37) ;
+}
+.navbar-3 ul li ul a{
+    color:white;
+    padding: 0;
+    margin: 0;
+}
+.navbar-3 ul li:hover ul{
+    visibility: visible;
+    opacity:1;
+    height:350%;
+}
