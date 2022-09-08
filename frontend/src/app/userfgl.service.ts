@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class UserfglService {
   private userfglobj: object = {};
+  private loginobj:object ={};
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -17,5 +18,9 @@ export class UserfglService {
     this.userfglobj = userfglobj;
     console.log("userfglobj in services = ", this.userfglobj);
     return this.http.post('http://localhost:3000/fglform', this.userfglobj, { headers: this.headers})
+  }
+  postFglReports(loginobj:object):Observable<{}>{
+    this.loginobj = loginobj;
+    
   }
 }

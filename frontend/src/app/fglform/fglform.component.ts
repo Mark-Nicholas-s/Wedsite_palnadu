@@ -17,7 +17,7 @@ export class FGLformComponent implements OnInit {
   DealerAddress: String = '';
   Nameofpresonatinsp: String = '';
   addressofpresonatinsp: String = '';
-  Dsonumber: String = '';
+  Dsonumber: string = '';
   Vattinnumber: string = '';
   StockRegister!: string;
   SalesRegister!: String;
