@@ -2,6 +2,8 @@ var mysql =require("mysql2");
 const express = require('express');
 const router = express.Router();
 const bodyparser = require('body-parser');
+const connection = require("../connection");
+const { response } = require("express");
 var Connection= mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -44,7 +46,18 @@ router.post('/fglform', (req, res) => {
     res.send({message: 'success', res: userFglObj});
 });
 
-router.get('/fglform', (req, res) => {
-    res.send(`<h1>fglform works!!</h1>`);
+// login routes
+
+router.post('/login', (req, res) => {
+    var loginobj = req.body;
+    Connection.query(`SELECT * FROM fgllogins WHERE Email = '${ loginobj.Email}'`, (err,result)=>{
+        if (err) {
+            res.send(['error', err])
+        }
+        else{
+        res.send(result); 
+        }
+    })
+
 });
 module.exports = router;
